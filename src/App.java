@@ -2,6 +2,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         metodoBurbuja();
         runMetodoBurbujaAvanzado();
+        runSeleccion();
     }
 
     public static void metodoBurbuja(){
@@ -34,4 +35,17 @@ public class App {
         mBurbujaAvanzado.printArreglo();
     }
 
+    public static void runSeleccion(){
+        //Instanciar clase Seleccion
+        int[] arr = new int[]{1, 10, 7, 9, 0, 1, 3, 4};
+        MetodoClaseSeleccion mSeleccion = new MetodoClaseSeleccion(arr);
+        System.out.println("------------------");
+        mSeleccion.printArreglo();
+        mSeleccion.sort(arr);
+        mSeleccion.printArreglo();
+        mSeleccion.sortDes(arr);
+        mSeleccion.printArreglo();
+
+        
+    }
 }
